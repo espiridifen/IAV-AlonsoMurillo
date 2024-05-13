@@ -16,7 +16,7 @@ public class Enemy : Battler
         base.Start();
         heroes = BattleManager.Instance.heroes;
     }
-    
+
     protected virtual void Attack(Hero hero)
     {
         Debug.Log(gameObject.name + " attacked " + hero.gameObject.name);
@@ -37,6 +37,7 @@ public class Enemy : Battler
     {
         OnStartTurn?.Invoke(this);
         Attack(PickRandomHero());
+        //FuzzyBrain.SelectAction(this);
     }
 
     protected override void EndTurn()

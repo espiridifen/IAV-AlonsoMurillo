@@ -35,22 +35,92 @@ Las variables que el enemigo tendrá a su disposición para fuzzyficar son:
 * La defensa de todos los combatientes
 * Las estadísticas de crítico (probabilidad y daño) de todos los combatientes
 
-El control de la lógica difusa se hará en la clase FuzzyBrain. Su pseudocódigo es el siguiente:
+Los numeros no son representativos del producto final.
 
+```
+INPUT:
+      HealthPoints:
+            -healthy: 100~80
+            -risky: 79~40
+            -dangerous: 39~0
+
+      ManaPoints:
+            -max: 100~70
+            -medium: 69~30
+            -low: 29~1
+            -out: 0
+
+      StatusEffects:
+            -lowRisk: 0~1
+            -mediumRisk: 2~3
+            -highRisk: x>3
+
+      Speed:
+            -fast: 100~70
+            -normal: 69~40
+            -slow: 39~1
+
+      Defense: 
+            -tank: 100~70
+            -normal: 69~40
+            -fragile: 39~1
+
+      CriticalChance:
+            -High: 100~50
+            -Medium: 49~20
+            -Low: x<20
+
+      CriticalMultiplier:
+            -High: 3~2
+            -Medium: 2~1.5
+            -Low: 1.5~1.25
+```
+Con estas fuzzificaciones haremos los comportamientos respecto al estado del juego que sacaran un output. Los numeros que saquen tendran que ser ajustados para cada IA.
+```
+OUTPUT:
+      Attack:
+            -high
+            -medium
+            -low
+      Magic_Attack:
+            -high
+            -medium
+            -low
+      Defend:
+            -high
+            -medium
+            -low
+      Heal:
+            -high
+            -medium
+            -low
+```
+Y las acciones se sacarian como tal:
+```
+IF myHealthPoints IS dangerous THEN Heal IS high
+IF enemyHealthPoints IS risky AND CriticalChance IS High THEN Attack is high
+```
+
+El control de la lógica difusa se hará en la clase FuzzyBrain. Su pseudocódigo es el siguiente:
 ```
 class FuzzyBrain
 
 
 
 function selectAction(Enemy enemy)
-
-
-
       fuzzyLogic.evaluate = true;
       nextAction = fuzzyLogic.GetFuzzificationByName("action");
       nextTarget = fuzzyLogic.GetFuzzificationByName("target");
 
 ```
+## Pruebas y métricas
+
+Plan de pruebas para comprobar si un jugador nota la diferencia entre los distintos comportamientos de las IAs.
+
+### Jugador contra IA
+      -Se hara una partida en el que un jugador combatira contra una IA.
+      -Se pondra al jugador contra IAs de distintos comportamientos.  
+
 
  ## Agradecimientos
 

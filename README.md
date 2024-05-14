@@ -119,7 +119,8 @@ Plan de pruebas para comprobar si un jugador nota la diferencia entre los distin
 
 ### Jugador contra IA
       -Se hara una partida en el que un jugador combatira contra una IA.
-      -Se pondra al jugador contra IAs de distintos comportamientos.  
+      -Se pondra al jugador contra IAs de distintos comportamientos.
+      -Se hara el mismo input para comprobar que realiza las mismas acciones.  
 
 
  ## Agradecimientos

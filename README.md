@@ -123,6 +123,10 @@ Plan de pruebas para comprobar si un jugador nota la diferencia entre los distin
       -Se hara el mismo input para comprobar que realiza las mismas acciones.  
 
 
+## Producción
+
+Enlace a la tabla de tareas de [Github Proyects](https://github.com/users/espiridifen/projects/3)
+
  ## Agradecimientos
 
 - [FuzzyLogic por chengkehan](https://github.com/chengkehan/FuzzyLogic)

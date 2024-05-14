@@ -3296,7 +3296,8 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1169946812716478648, guid: 1f8f0bd4c88312f4faceae97c9743cd4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -4856,15 +4857,15 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1788486491, guid: cc91943099992d34186d82efe6a1d4a7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4872743088353f34fb6ee101fdce15d6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
+  m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1582786671
@@ -5835,7 +5836,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: b8d7b2dde9aa82643ac6a9db989feddd, type: 3}
+  m_audioClip: {fileID: 8300000, guid: dc660a07424d91e4881c61ccb36489d2, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.07
   m_Pitch: 1
@@ -5950,8 +5951,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _audioSourceIntro: {fileID: 2076246975}
   _audioSourceLoop: {fileID: 2076246978}
-  _songIntro: {fileID: 8300000, guid: b8d7b2dde9aa82643ac6a9db989feddd, type: 3}
-  _songLoop: {fileID: 8300000, guid: ef70d7697490d484d8ead134a07551ec, type: 3}
+  _songIntro: {fileID: 8300000, guid: 7a5649d151c497e47891c440a295d925, type: 3}
+  _songLoop: {fileID: 8300000, guid: 944c37e08d7dde14d9c89e399ceca385, type: 3}
 --- !u!82 &2076246978
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5962,7 +5963,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ef70d7697490d484d8ead134a07551ec, type: 3}
+  m_audioClip: {fileID: 8300000, guid: dc660a07424d91e4881c61ccb36489d2, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 0.07
   m_Pitch: 1
@@ -6408,6 +6409,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6183194970535629200, guid: cee0d94bda1949e44a630a006283a75d, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: f3f9b49bbc7b1d64e8418fe4211f0d39, type: 2}
     - target: {fileID: 6183194970535629201, guid: cee0d94bda1949e44a630a006283a75d, type: 3}
       propertyPath: _moveOffset
       value: 3
@@ -6471,7 +6476,7 @@ PrefabInstance:
     - target: {fileID: 6183194970535629202, guid: cee0d94bda1949e44a630a006283a75d, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+      objectReference: {fileID: 21300000, guid: 0b9fc6cd44144c34980ba3f5ea465827, type: 3}
     - target: {fileID: 6183194970535629202, guid: cee0d94bda1949e44a630a006283a75d, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -6482,23 +6487,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6183194970535629203, guid: cee0d94bda1949e44a630a006283a75d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6183194970535629203, guid: cee0d94bda1949e44a630a006283a75d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6183194970535629203, guid: cee0d94bda1949e44a630a006283a75d, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 6183194970535629203, guid: cee0d94bda1949e44a630a006283a75d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.04
+      value: 7.8
       objectReference: {fileID: 0}
     - target: {fileID: 6183194970535629203, guid: cee0d94bda1949e44a630a006283a75d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.14
+      value: 1.19
       objectReference: {fileID: 0}
     - target: {fileID: 6183194970535629203, guid: cee0d94bda1949e44a630a006283a75d, type: 3}
       propertyPath: m_LocalPosition.z

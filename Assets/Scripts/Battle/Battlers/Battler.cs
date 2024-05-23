@@ -50,7 +50,11 @@ public abstract class Battler : MonoBehaviour
     public float CurrentMana { get { return currentMana; } }
     public float MaxHealth { get { return maxHealthStat.Value; } }
     public float MaxMana { get { return maxManaStat.Value; } }
-
+    public float Speed { get { return speedStat.Value; } }
+    public float Critical { get { return criticalStat.Value; } }
+    public float Evasion { get { return evasionStat.Value; } }
+    public float Defense { get { return physicalDefenseStat.Value; } }
+    public float Attack { get { return physicalAttackStat.Value; } }
     public Battler()
     {
         abilitiesData = new List<AbilityData>();

@@ -15,62 +15,76 @@ public class HeroAnimationController : MonoBehaviour
 
     public void PlayIdle()
     {
-        _animator.SetBool("isReady", false);
+        if (_animator != null)
+            _animator.SetBool("isReady", false);
     }
 
     public void PlayUseItem()
     {
-        _animator.SetTrigger("ItemTrigger");
+        if (_animator != null)
+
+            _animator.SetTrigger("ItemTrigger");
     }
 
     public void PlayAttack()
     {
-        _animator.SetTrigger("AttackTrigger");
+
+        if (_animator != null)
+            _animator.SetTrigger("AttackTrigger");
     }
 
     public void PlaySpecialAttack()
     {
-        _animator.SetTrigger("SpecialTrigger");
+        if (_animator != null)
+            _animator.SetTrigger("SpecialTrigger");
     }
 
     public void PlayGetDamaged()
     {
-        _animator.SetTrigger("HurtTrigger");
+        if (_animator != null)
+            _animator.SetTrigger("HurtTrigger");
     }
 
     public void PlayBuff()
     {
-        _animator.SetTrigger("BuffTrigger");
+        if (_animator != null)
+            _animator.SetTrigger("BuffTrigger");
     }
 
     public void PlayDefend()
     {
-        _animator.SetBool("isDefending", true);
+        if (_animator != null)
+            _animator.SetBool("isDefending", true);
     }
 
     public void StopDefend()
     {
-        _animator.SetBool("isDefending", false);
+        if (_animator != null)
+            _animator.SetBool("isDefending", false);
     }
 
     public void PlayReady()
     {
-        _animator.SetBool("isReady", true);
+        if (_animator != null)
+            _animator.SetBool("isReady", true);
     }
 
     public void PlayMoveForward()
     {
-        _animator.SetTrigger("MoveForward");
+        if (_animator != null)
+            _animator.SetTrigger("MoveForward");
     }
 
     public void PlayMoveBackward()
     {
-        _animator.SetTrigger("MoveBackward");
+        if (_animator != null)
+            _animator.SetTrigger("MoveBackward");
     }
 
     public void PlayEvade()
     {
-        _animator.SetTrigger("EvadeTrigger");
+        if (_animator != null)
+            _animator.SetTrigger("EvadeTrigger");
     }
 
     public void PlayWin()
@@ -80,4 +94,4 @@ public class HeroAnimationController : MonoBehaviour
 
 
 }
- 
+

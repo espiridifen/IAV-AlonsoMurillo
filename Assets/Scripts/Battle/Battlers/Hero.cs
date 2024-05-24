@@ -65,6 +65,7 @@ public class Hero : Battler
         audioController.PlayAttackVoice();
         animationController.PlayAttack();
         OnTargetOther?.Invoke(this, enemyTarget);
+        enemyTarget.UpdateHealthUI();
     }
 
     //Called on by an animation event at the point of impact to deal damage to enemy.

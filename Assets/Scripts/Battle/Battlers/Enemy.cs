@@ -11,6 +11,13 @@ public class Enemy : Battler
     public delegate void EndTurnEventHandler();
     public event EndTurnEventHandler OnEndTurn;
 
+    //Events for UI
+    public delegate void HealthEventHandler(float health);
+    public event HealthEventHandler OnHealthChanged;
+    public delegate void TurnTimerEventHandler(float time);
+    public event TurnTimerEventHandler OnTurnTimeChanged;
+    public delegate void ManaEventHandler(float mana);
+    public event ManaEventHandler OnManaChanged;
     protected override void Start()
     {
         base.Start();
@@ -59,4 +66,19 @@ public class Enemy : Battler
         yield return new WaitForSeconds(seconds);
         EndTurn();
     }
+
+    public void UpdateManaUI()
+    {
+        OnManaChanged?.Invoke(currentMana);
+    }
+
+    public void UpdateHealthUI()
+    {
+        OnHealthChanged?.Invoke(currentHealth);
+    }
+    public void UpdateTimeUI()
+    {
+        OnTurnTimeChanged?.Invoke(turnTimer);
+    }
+
 }

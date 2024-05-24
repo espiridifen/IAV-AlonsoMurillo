@@ -21,6 +21,7 @@ public class BattleUIHandler : MonoBehaviour
     [SerializeField] GameObject _actionMenu;
     [SerializeField] GameObject _subMenu;
     [SerializeField] List<HeroUIController> _heroInfoControllers;
+    [SerializeField] List<EnemyUIController> _enemyInfoControllers;
     [SerializeField] GameObject _selector;
     [SerializeField] float _selectorOffsetX = 2f;
     [SerializeField] float _selectorOffsetZ = -1f;
@@ -67,6 +68,7 @@ public class BattleUIHandler : MonoBehaviour
             _abilitiesButton.onClick.AddListener(DisplayAbilitiesMenu);
             _itemsButton.onClick.AddListener(DisplayItemsMenu);
             InitializeHeroUI();
+            InitializeEnemyUI();
             InitializeButtonPool(_startingButtonPoolSize);
         }
         else
@@ -88,6 +90,21 @@ public class BattleUIHandler : MonoBehaviour
             }
             Hero hero = BattleManager.Instance.heroes[i];
             _heroInfoControllers[i].Initialize(hero);
+        }
+    }
+
+    private void InitializeEnemyUI()
+    {
+        // If there is any leftover Enemy UIs that don't need to be assigned, they will not be active and displayed.
+        for (int i = 0; i < _enemyInfoControllers.Count; i++)
+        {
+            if(i >= BattleManager.Instance.enemies.Count)
+            {
+                _enemyInfoControllers[i].gameObject.SetActive(false);
+                continue;
+            }
+            Enemy enemy = BattleManager.Instance.enemies[i];
+            _enemyInfoControllers[i].Initialize(enemy);
         }
     }
 

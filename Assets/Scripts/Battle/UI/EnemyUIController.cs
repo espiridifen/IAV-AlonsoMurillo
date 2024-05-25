@@ -53,6 +53,12 @@ public class EnemyUIController : MonoBehaviour
         enemy.OnManaChanged += UpdateMana;
     }
 
+    public void UpdateUI()
+    {
+        UpdateHealth(_enemy.CurrentHealth);
+        UpdateMana(_enemy.CurrentMana);
+    }
+
     private void UpdateHealth(float health)
     {
         _healthBar.value = Mathf.Clamp(health, 0, _maxHealth);

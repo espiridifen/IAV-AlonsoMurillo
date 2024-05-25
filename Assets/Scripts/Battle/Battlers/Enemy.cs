@@ -81,4 +81,9 @@ public class Enemy : Battler
         OnTurnTimeChanged?.Invoke(turnTimer);
     }
 
+    internal void OnAttacked()
+    {
+        UpdateHealthUI();
+        //recalcular la accion?
+    }
 }

@@ -65,7 +65,7 @@ public class Hero : Battler
         audioController.PlayAttackVoice();
         animationController.PlayAttack();
         OnTargetOther?.Invoke(this, enemyTarget);
-        enemyTarget.UpdateHealthUI();
+        enemyTarget.OnAttacked();
     }
 
     //Called on by an animation event at the point of impact to deal damage to enemy.
@@ -83,7 +83,7 @@ public class Hero : Battler
         UseMana(ability.ManaCost);
         OnDisplayAlert(ability.Name);
         audioController.PlaySpecialAttackVoice();
-        //animationController.PlaySpecialAttack();
+        animationController.PlaySpecialAttack();
         OnTargetOther?.Invoke(this,enemyTarget);
     }
 
@@ -95,7 +95,7 @@ public class Hero : Battler
         UseMana(ability.ManaCost);
         OnDisplayAlert(ability.Name);
         audioController.PlaySelfBuffVoice();
-        //animationController.PlayBuff();
+        animationController.PlayBuff();
         OnTargetSelf?.Invoke(this);
     }
 
@@ -118,7 +118,7 @@ public class Hero : Battler
         audioController.PlayStartGuardVoice();
         isDefending = true;
         AddModifier(defendStanceModifier);
-        //animationController.PlayDefend();
+        animationController.PlayDefend();
         Debug.Log(gameObject.name + " defends.");
     }
 

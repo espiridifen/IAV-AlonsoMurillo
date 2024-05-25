@@ -108,6 +108,19 @@ public class BattleUIHandler : MonoBehaviour
         }
     }
 
+    public void UpdateEnemyUI()
+    {
+        for (int i = 0; i < _enemyInfoControllers.Count; i++)
+        {
+            if(i >= BattleManager.Instance.enemies.Count)
+            {
+                _enemyInfoControllers[i].gameObject.SetActive(false);
+                continue;
+            }
+            _enemyInfoControllers[i].UpdateUI();
+        }
+    }
+
     private void InitializeButtonPool(int startingSize)
     {
         for (int i = 0; i < startingSize; i++)

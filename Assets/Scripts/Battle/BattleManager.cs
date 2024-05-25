@@ -108,6 +108,7 @@ public class BattleManager : MonoBehaviour
         //Micro delay to allow for any remaining animations to finish.
         StartCoroutine(EndTurnDelay(_turnDelaySeconds));
         BattleUIHandler.Instance.ToggleActionMenu(false);
+        BattleUIHandler.Instance.UpdateEnemyUI();
     }
 
     private IEnumerator EndTurnDelay(float seconds)

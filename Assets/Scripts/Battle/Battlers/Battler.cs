@@ -55,6 +55,8 @@ public abstract class Battler : MonoBehaviour
     public float Evasion { get { return evasionStat.Value; } }
     public float Defense { get { return physicalDefenseStat.Value; } }
     public float Attack { get { return physicalAttackStat.Value; } }
+
+    public float critDamage { get { return critDamageMultiplier; } }
     public Battler()
     {
         abilitiesData = new List<AbilityData>();

@@ -1,22 +1,28 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using FuzzyLogicSystem; // <-- esta
+using FuzzyLogicSystem;
 
 public class EnemyBrain : MonoBehaviour
 {
-    FuzzyLogic fuzzyLogic;
-    Enemy enemy;
+    public TextAsset fuzzyLogicData = null;
+    public FuzzyLogic fuzzyLogic { get; private set; } = null;
+    
+    [SerializeField] Enemy enemy;
     // Start is called before the first frame update
     void Start()
     {
-
-
+        fuzzyLogic = FuzzyLogic.Deserialize(fuzzyLogicData.bytes, null);
 
     }
 
     // Update is called once per frame
     void Update()
+    {
+
+    }
+
+    void UpdateValues()
     {
         fuzzyLogic.evaluate = true;
         fuzzyLogic.GetFuzzificationByName("CurrentHP").value = enemy.CurrentHealth;
@@ -31,5 +37,13 @@ public class EnemyBrain : MonoBehaviour
         fuzzyLogic.GetFuzzificationByName("EnemyDefense").value = enemy.Defense;
         fuzzyLogic.GetFuzzificationByName("EnemyCriticalChance").value = enemy.Critical;
         fuzzyLogic.GetFuzzificationByName("EnemyCritMultiplier").value = enemy.critDamage;
+
+    }
+
+    void CalculateData()
+    {
+        UpdateValues();
+        //recoger inferencias
+            
     }
 }

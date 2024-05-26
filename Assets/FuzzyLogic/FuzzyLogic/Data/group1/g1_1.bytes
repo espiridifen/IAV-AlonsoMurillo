@@ -792,5 +792,5 @@
         }
     ],
     "_guid": "ed665bd4-aa80-4ac4-a428-11c4d5aa4fe5",
-    "_name": "EnemyBrain"
+    "_name": "EnemyFuzzyBrain"
 }

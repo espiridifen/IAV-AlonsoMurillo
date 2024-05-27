@@ -9,6 +9,10 @@ public class MonsterDuck : Enemy
 
     [SerializeField] float _healAmount = 10f;
     [SerializeField] float _healCost = 30f;
+    [SerializeField] float _buffCost = 30f;
+    [SerializeField] float _debuffCost = 30f;
+    float criticalMultiplier = 1.25f;
+    float critChance = 0.1f;
     private StatModifier defendStanceModifier;
 
     public bool isDefending { get; private set; }
@@ -18,6 +22,8 @@ public class MonsterDuck : Enemy
         //Offset bird to be off the ground at a random defined height.
         transform.position += new Vector3(0f, Random.Range(_startPositionOffsetMin, _startPositionOffsetMax) , 0f);
         base.Start();
+        critChance = this.Critical;
+        critDamageMultiplier = this.critDamageMultiplier;
     }
 
     protected void Heal()
@@ -28,6 +34,27 @@ public class MonsterDuck : Enemy
             RecoverHealth(_healAmount);
             OnDisplayAlert("Heal");
         }else OnDisplayAlert("Heal does not work!");
+    }
+
+    protected void Buff()
+    {
+        if (CurrentMana >= _buffCost)
+        {
+            UseMana(_buffCost);
+            AddModifier(new StatModifier(100.0f, StatType.Critical, StatModifierType.Flat));
+            critDamageMultiplier = 3.0f;
+            OnDisplayAlert("Buff");
+        }else OnDisplayAlert("Buff does not work!");
+    }
+
+    protected void Debuff()
+    {
+        if (CurrentMana >= _debuffCost)
+        {
+            UseMana(_debuffCost);
+            AddModifier(new StatModifier(1.25f, StatType.PhysicalAttack, StatModifierType.PercentMultiply));
+            OnDisplayAlert("Debuff");
+        }else OnDisplayAlert("Debuff does not work!");
     }
 
     protected override void StartTurn()
@@ -47,6 +74,14 @@ public class MonsterDuck : Enemy
                 Heal();
                 break;
             case "Defend":
+                Defend();
+                break;
+            case "Buff":
+                Buff();
+                break;
+            case "Debuff":
+                Debuff();
+                break;
             default:
                 Defend();
                 break;

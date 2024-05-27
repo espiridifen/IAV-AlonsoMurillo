@@ -13,17 +13,18 @@ public class MonsterDuck : Enemy
     [SerializeField] float _debuffCost = 30f;
     float criticalMultiplier = 1.25f;
     float critChance = 0.1f;
-    private StatModifier defendStanceModifier;
-
+    private StatModifier defendStanceModifier = new StatModifier(1, StatType.PhysicalDefense, StatModifierType.PercentMultiply);
+    private StatModifier critModifier = new StatModifier(100.0f, StatType.Critical, StatModifierType.Flat);
+    private StatModifier debuffModifier = new StatModifier(1.25f, StatType.PhysicalAttack, StatModifierType.PercentMultiply);
     public bool isDefending { get; private set; }
 
     protected override void Start()
     {
         //Offset bird to be off the ground at a random defined height.
         transform.position += new Vector3(0f, Random.Range(_startPositionOffsetMin, _startPositionOffsetMax) , 0f);
-        base.Start();
         critChance = this.Critical;
         critDamageMultiplier = this.critDamageMultiplier;
+        base.Start();
     }
 
     protected void Heal()
@@ -41,7 +42,7 @@ public class MonsterDuck : Enemy
         if (CurrentMana >= _buffCost)
         {
             UseMana(_buffCost);
-            AddModifier(new StatModifier(100.0f, StatType.Critical, StatModifierType.Flat));
+            AddModifier(critModifier);
             critDamageMultiplier = 3.0f;
             OnDisplayAlert("Buff");
         }else OnDisplayAlert("Buff does not work!");
@@ -52,7 +53,7 @@ public class MonsterDuck : Enemy
         if (CurrentMana >= _debuffCost)
         {
             UseMana(_debuffCost);
-            AddModifier(new StatModifier(1.25f, StatType.PhysicalAttack, StatModifierType.PercentMultiply));
+            AddModifier(debuffModifier);
             OnDisplayAlert("Debuff");
         }else OnDisplayAlert("Debuff does not work!");
     }

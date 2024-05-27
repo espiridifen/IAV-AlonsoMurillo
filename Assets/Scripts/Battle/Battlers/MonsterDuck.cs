@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MonsterBird : Enemy
+public class MonsterDuck : Enemy
 {
     [SerializeField] float _startPositionOffsetMax = 3f;
     [SerializeField] float _startPositionOffsetMin = 1f;
 
     [SerializeField] float _healAmount = 10f;
     [SerializeField] float _healCost = 30f;
-    private StatModifier defendStanceModifier = new StatModifier(1, StatType.PhysicalDefense, StatModifierType.PercentMultiply);
+    private StatModifier defendStanceModifier;
 
     public bool isDefending { get; private set; }
 
@@ -30,18 +30,18 @@ public class MonsterBird : Enemy
         }else OnDisplayAlert("Heal does not work!");
     }
 
-    protected override void SelectAction()
+    protected override void StartTurn()
     {
-        
-        ResetDefence();
+        invokeStartTurn();
         var action = enemyBrain.CalculateNextAction();
+
 
         //el codigo de cada uno
 
         switch (action)
         {
             case "Attack":
-                Attack(enemyBrain.target);
+                Attack(PickRandomHero());
                 break;
             case "Heal":
                 Heal();

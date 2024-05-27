@@ -5,7 +5,7 @@
             "_maxValue": 100,
             "_guid": "db7f7876-bdb1-41db-9ff3-8c0460d97ac0",
             "_name": "CurrentHP",
-            "_value": 54.20000076293945,
+            "_value": 53.0,
             "trapezoids": [
                 {
                     "_guid": "581ccd38-23cd-46c1-a260-3aeee8174418",
@@ -56,7 +56,7 @@
             "_maxValue": 100,
             "_guid": "490e24af-25ff-4209-b9a6-a92ceb761c05",
             "_name": "EnemyHP",
-            "_value": 37.0,
+            "_value": 100.0,
             "trapezoids": [
                 {
                     "_guid": "7a504c3d-5913-4ea6-8129-4097fad19fa1",
@@ -107,7 +107,7 @@
             "_maxValue": 100,
             "_guid": "39f3764b-308c-4d69-86ab-03a02c579270",
             "_name": "CurrentMana",
-            "_value": 0.0,
+            "_value": 100.0,
             "trapezoids": [
                 {
                     "_guid": "c9c8256e-f72e-4dc9-9e8e-ebd267808e5b",
@@ -696,26 +696,74 @@
     "inferences": [
         {
             "_guid": "18d098d7-5df7-4817-bd64-31ecc6418d87",
-            "_name": "a",
-            "_leftSideInputGUID": "581ccd38-23cd-46c1-a260-3aeee8174418",
-            "_rightSideInputGUID": "030859b4-8c82-4f9d-901d-2f804b852531",
-            "_outputGUID": "4990b4e7-d086-4b43-81b0-ced81693c110",
-            "_op": 2
+            "_name": "Defend_1",
+            "_leftSideInputGUID": "59b62df9-cece-43f4-8178-e8add09f6d27",
+            "_rightSideInputGUID": "c31899a7-e518-4c45-870f-a9ed704ce269",
+            "_outputGUID": "18d098d7-5df7-4817-bd64-31ecc6418d87",
+            "_op": 1
         },
         {
             "_guid": "afc53f73-0866-4254-a523-14e8f98869bc",
-            "_name": "b",
-            "_leftSideInputGUID": "59b62df9-cece-43f4-8178-e8add09f6d27",
+            "_name": "Scared",
+            "_leftSideInputGUID": "f08d5819-7f93-4ae5-88ad-b0137cfac427",
             "_rightSideInputGUID": "581ccd38-23cd-46c1-a260-3aeee8174418",
-            "_outputGUID": "ffaacbfa-4d3a-47d7-b976-db3ffce95f93",
-            "_op": 4
+            "_outputGUID": "afc53f73-0866-4254-a523-14e8f98869bc",
+            "_op": 2
         },
         {
             "_guid": "030859b4-8c82-4f9d-901d-2f804b852531",
-            "_name": "c",
-            "_leftSideInputGUID": "7a504c3d-5913-4ea6-8129-4097fad19fa1",
-            "_rightSideInputGUID": "c31899a7-e518-4c45-870f-a9ed704ce269",
+            "_name": "Heal",
+            "_leftSideInputGUID": "afc53f73-0866-4254-a523-14e8f98869bc",
+            "_rightSideInputGUID": "209be71f-262c-41f2-b023-df9db72412d4",
             "_outputGUID": "030859b4-8c82-4f9d-901d-2f804b852531",
+            "_op": 1
+        },
+        {
+            "_guid": "94d2aea6-3940-4719-b3ee-9b2cdb3e48a2",
+            "_name": "Defend_2",
+            "_leftSideInputGUID": "afc53f73-0866-4254-a523-14e8f98869bc",
+            "_rightSideInputGUID": "e477b0fb-4942-4b04-9b18-525e07903a09",
+            "_outputGUID": "94d2aea6-3940-4719-b3ee-9b2cdb3e48a2",
+            "_op": 1
+        },
+        {
+            "_guid": "7d68b469-f45d-4fcd-b5b0-31d9e6f3d3d3",
+            "_name": "Defend",
+            "_leftSideInputGUID": "18d098d7-5df7-4817-bd64-31ecc6418d87",
+            "_rightSideInputGUID": "94d2aea6-3940-4719-b3ee-9b2cdb3e48a2",
+            "_outputGUID": "7d68b469-f45d-4fcd-b5b0-31d9e6f3d3d3",
+            "_op": 2
+        },
+        {
+            "_guid": "209be71f-262c-41f2-b023-df9db72412d4",
+            "_name": "HasMana",
+            "_leftSideInputGUID": "4df5c3dc-0872-47f8-9728-277ff24cbefe",
+            "_rightSideInputGUID": "e1aadfe1-f03e-4842-ac50-a3d4d43db2cc",
+            "_outputGUID": "209be71f-262c-41f2-b023-df9db72412d4",
+            "_op": 2
+        },
+        {
+            "_guid": "5b64316c-f3b9-4f97-8478-11bebd177fea",
+            "_name": "Attack_1",
+            "_leftSideInputGUID": "59b62df9-cece-43f4-8178-e8add09f6d27",
+            "_rightSideInputGUID": "f08d5819-7f93-4ae5-88ad-b0137cfac427",
+            "_outputGUID": "5b64316c-f3b9-4f97-8478-11bebd177fea",
+            "_op": 1
+        },
+        {
+            "_guid": "201d690e-963b-4895-8608-92158f01c26c",
+            "_name": "Attack_2",
+            "_leftSideInputGUID": "59b62df9-cece-43f4-8178-e8add09f6d27",
+            "_rightSideInputGUID": "581ccd38-23cd-46c1-a260-3aeee8174418",
+            "_outputGUID": "201d690e-963b-4895-8608-92158f01c26c",
+            "_op": 1
+        },
+        {
+            "_guid": "3676098d-9b24-491e-8b09-612739375081",
+            "_name": "Attack",
+            "_leftSideInputGUID": "5b64316c-f3b9-4f97-8478-11bebd177fea",
+            "_rightSideInputGUID": "201d690e-963b-4895-8608-92158f01c26c",
+            "_outputGUID": "3676098d-9b24-491e-8b09-612739375081",
             "_op": 2
         }
     ],

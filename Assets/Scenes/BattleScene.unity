@@ -916,6 +916,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 255619103}
   m_CullTransparentMesh: 1
+--- !u!1 &281288052 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1169946812716478650, guid: 1f8f0bd4c88312f4faceae97c9743cd4, type: 3}
+  m_PrefabInstance: {fileID: 1217543614}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &296153232 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1495643035756691023, guid: 17b0266578cbe784c82ef778a73e701a, type: 3}
@@ -1681,12 +1686,26 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1169946812716478653, guid: 1f8f0bd4c88312f4faceae97c9743cd4, type: 3}
   m_PrefabInstance: {fileID: 1217543614}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 281288052}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 012fbba8b353cc341a98e0f3e132d6cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &575653209
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281288052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5574cfb9a206f5f429edc8837fe73c64, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fuzzyLogicData: {fileID: 4900000, guid: 6928e9411d993441696520343ac2b6b9, type: 3}
+  enemy: {fileID: 575653205}
 --- !u!114 &588965294 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1169946812716478653, guid: 1f8f0bd4c88312f4faceae97c9743cd4, type: 3}
@@ -3598,7 +3617,10 @@ PrefabInstance:
     - {fileID: 1169946812716478648, guid: 1f8f0bd4c88312f4faceae97c9743cd4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1169946812716478650, guid: 1f8f0bd4c88312f4faceae97c9743cd4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 575653209}
   m_SourcePrefab: {fileID: 100100000, guid: 1f8f0bd4c88312f4faceae97c9743cd4, type: 3}
 --- !u!1 &1318068568
 GameObject:
@@ -5418,19 +5440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5574cfb9a206f5f429edc8837fe73c64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fuzzyLogic:
-    fuzzifications: []
-    _defuzzitication:
-      _division: 0
-      _maxValue: 0
-      _guid: 
-      _name: 
-      _value: 0
-      trapezoids: []
-      _subdivision: 0
-    inferences: []
-    _guid: 
-    _name: 
+  fuzzyLogicData: {fileID: 4900000, guid: 6928e9411d993441696520343ac2b6b9, type: 3}
   enemy: {fileID: 588965294}
 --- !u!1 &1622401476
 GameObject:

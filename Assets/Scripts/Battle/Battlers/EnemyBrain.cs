@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using FuzzyLogicSystem;
 using System.Linq;
+using UnityEditor.SearchService;
 
 public class EnemyBrain : MonoBehaviour
 {
@@ -32,15 +33,18 @@ public class EnemyBrain : MonoBehaviour
 
     
     //set de acciones para tenerlas ordenadas de mayor a menor, y asi sacar la mas prioritaria
-    HashSet<Action> action; 
+    HashSet<Action> actions; 
 
     bool isTurn = false;
     
     [SerializeField] Enemy enemy;
+
+    public Hero target { get; private set; }
     // Start is called before the first frame update
     void Start()
     {
         fuzzyLogic = FuzzyLogic.Deserialize(fuzzyLogicData.bytes, null);
+        actions = new HashSet<Action>();
 
     }
 
@@ -49,10 +53,24 @@ public class EnemyBrain : MonoBehaviour
     {
         if (isTurn)
         {
-            UpdateValues();
-            CalculateData();
-            doAction();
+            
+            
+
         }
+    }
+
+    public string CalculateNextAction()
+    {
+        SelectTarget();
+        UpdateValues();
+        CalculateData();
+        return actions.First().name;
+    }
+
+    private void SelectTarget()
+    {
+        //random, se podría extender la lógica difusa para elegir el objetivo, pero el sistema de FuzzyLogic no es muy escalable
+        target = BattleManager.Instance.heroes[Random.Range(0, BattleManager.Instance.heroes.Count)];
     }
 
     void UpdateValues()
@@ -64,12 +82,12 @@ public class EnemyBrain : MonoBehaviour
         fuzzyLogic.GetFuzzificationByName("Defense").value = enemy.Defense;
         fuzzyLogic.GetFuzzificationByName("CriticalChance").value = enemy.Critical;
         fuzzyLogic.GetFuzzificationByName("CritMultiplier").value = enemy.critDamage;
-        fuzzyLogic.GetFuzzificationByName("EnemyHP").value = enemy.CurrentHealth;
-        fuzzyLogic.GetFuzzificationByName("EnemyMana").value = enemy.CurrentMana;
-        fuzzyLogic.GetFuzzificationByName("EnemySpeed").value = enemy.Speed;
-        fuzzyLogic.GetFuzzificationByName("EnemyDefense").value = enemy.Defense;
-        fuzzyLogic.GetFuzzificationByName("EnemyCriticalChance").value = enemy.Critical;
-        fuzzyLogic.GetFuzzificationByName("EnemyCritMultiplier").value = enemy.critDamage;
+        fuzzyLogic.GetFuzzificationByName("EnemyHP").value = target.CurrentHealth;
+        fuzzyLogic.GetFuzzificationByName("EnemyMana").value = target.CurrentMana;
+        fuzzyLogic.GetFuzzificationByName("EnemySpeed").value = target.Speed;
+        fuzzyLogic.GetFuzzificationByName("EnemyDefense").value = target.Defense;
+        fuzzyLogic.GetFuzzificationByName("EnemyCriticalChance").value = target.Critical;
+        fuzzyLogic.GetFuzzificationByName("EnemyCritMultiplier").value = target.critDamage;
 
     }
 
@@ -80,42 +98,18 @@ public class EnemyBrain : MonoBehaviour
         //valor de 0 a 1
         for(int i = 0; i < fuzzyLogic.NumberInferences(); i++)
         {
-            action.Add(new Action(fuzzyLogic.GetInference(i).name, fuzzyLogic.GetInference(i).Output()));
+            var action = new Action(fuzzyLogic.GetInference(i).name, fuzzyLogic.GetInference(i).Output());
+            if (action.name == "Defend" || action.name == "Attack" || action.name == "Heal" || action.name == "Buff" || action.name == "Debuff") //solo las inferencias que nos interesan
+            {
+                actions.Add(action);
+            }
         }
         //valor a devolver
         //action.First();
             
     }
 
-    void doAction()
-    {
-
-        switch (action.First().name)
-        {
-            case "Attack":
-                //hacer ataque
-                break;
-            case "Defend":
-                //hacer defensa
-                break;
-            case "Heal":
-                //hacer curacion
-                break;
-            case "Buff":
-                //hacer buff
-                break;
-            case "Debuff":
-                //hacer debuff
-                break;
-            case "Flee":
-                //hacer huida
-                break;
-            default:
-                break;
-        }
-
-        isTurn = false;
-    }
+    
 
    
 }

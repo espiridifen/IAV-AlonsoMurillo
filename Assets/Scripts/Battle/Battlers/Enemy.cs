@@ -6,6 +6,8 @@ public class Enemy : Battler
 {
     protected List<Hero> heroes;
 
+    protected EnemyBrain enemyBrain;
+
     public delegate void StartTurnEventHandler(Enemy enemy);
     public event StartTurnEventHandler OnStartTurn;
     public delegate void EndTurnEventHandler();
@@ -22,6 +24,7 @@ public class Enemy : Battler
     {
         base.Start();
         heroes = BattleManager.Instance.heroes;
+        enemyBrain = GetComponent<EnemyBrain>();
     }
 
     protected virtual void Attack(Hero hero)
@@ -43,8 +46,18 @@ public class Enemy : Battler
     protected override void StartTurn()
     {
         OnStartTurn?.Invoke(this);
+        SelectAction();
+        
+    }
+
+   protected virtual void SelectAction()
+    {
         Attack(PickRandomHero());
-        //FuzzyBrain.SelectAction(this);
+    }
+
+    protected virtual void invokeStartTurn()
+    {
+        OnStartTurn?.Invoke(this);
     }
 
     protected override void EndTurn()

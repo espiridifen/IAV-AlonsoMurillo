@@ -789,6 +789,190 @@
             "_rightSideInputGUID": "f7ef8f6f-bb55-4f67-8f68-4a7d4b7ea432",
             "_outputGUID": "ffaacbfa-4d3a-47d7-b976-db3ffce95f93",
             "_op": 1
+        },
+        {
+            "_guid": "c2b8ed7a-4d59-45fb-bd06-f6fed7fec2b8",
+            "_name": "Attack",
+            "_leftSideInputGUID": "c0b2e04f-795f-4e65-a396-f90a5f7e67d4",
+            "_rightSideInputGUID": "c027c336-fe1d-49e2-a4e5-1cae7410c2e3",
+            "_outputGUID": "c2b8ed7a-4d59-45fb-bd06-f6fed7fec2b8",
+            "_op": 2
+        },
+        {
+            "_guid": "fb5b731b-f58f-424a-b611-bc8ea3a54894",
+            "_name": "Defend",
+            "_leftSideInputGUID": "88a423f3-d56c-4f44-83e2-6ad4bdc08491",
+            "_rightSideInputGUID": "ddbdfeae-6d7b-49f7-8662-8ecb0552f8f9",
+            "_outputGUID": "fb5b731b-f58f-424a-b611-bc8ea3a54894",
+            "_op": 2
+        },
+        {
+            "_guid": "e7825632-5a5a-4fb4-93cf-50810666fdaf",
+            "_name": "Heal",
+            "_leftSideInputGUID": "85e89e73-4c9a-4b49-aa39-2eb48c37cc1d",
+            "_rightSideInputGUID": "6cb6269f-82c9-4844-89f1-aa44cc322274",
+            "_outputGUID": "e7825632-5a5a-4fb4-93cf-50810666fdaf",
+            "_op": 2
+        },
+        {
+            "_guid": "ac083aed-08d5-4305-b1aa-b178d0373b60",
+            "_name": "Buff",
+            "_leftSideInputGUID": "aa11d07c-bbf6-4c94-ba14-55ec3636f454",
+            "_rightSideInputGUID": "8accb1b3-d969-446f-bfa8-fe88f7b3cecd",
+            "_outputGUID": "ac083aed-08d5-4305-b1aa-b178d0373b60",
+            "_op": 2
+        },
+        {
+            "_guid": "f6f11fc4-6f59-4d51-a7c4-e46d71b59b80",
+            "_name": "Debuff",
+            "_leftSideInputGUID": "c4c5039a-e392-4de7-bffb-c3925b04d574",
+            "_rightSideInputGUID": "0f9abb08-7c31-4074-a3eb-02dce2799a0b",
+            "_outputGUID": "f6f11fc4-6f59-4d51-a7c4-e46d71b59b80",
+            "_op": 2
+        },
+        {
+            "_guid": "e8bc1106-e9ac-42ba-8554-c65235305499",
+            "_name": "AttackPart1",
+            "_leftSideInputGUID": "10d34ebc-8f20-44ef-a48c-712f2cca840c",
+            "_rightSideInputGUID": "d8efd0b8-6858-42b4-b47c-7a88e44a1caa",
+            "_outputGUID": "e8bc1106-e9ac-42ba-8554-c65235305499",
+            "_op": 1
+        },
+        {
+            "_guid": "2eef3329-9458-40c2-9ee8-c04d5433b6f3",
+            "_name": "AttackPart2",
+            "_leftSideInputGUID": "f31ce7a0-e48e-4ba3-9672-0c567d9f5a1c",
+            "_rightSideInputGUID": "b60f15e1-a8c3-4ace-adb8-77ffb4fc6a6a",
+            "_outputGUID": "2eef3329-9458-40c2-9ee8-c04d5433b6f3",
+            "_op": 1
+        },
+        {
+            "_guid": "b60f15e1-a8c3-4ace-adb8-77ffb4fc6a6a",
+            "_name": "CritMulpHighMed",
+            "_leftSideInputGUID": "f5ebd030-ed25-47e2-84ff-cf82eca15ce9",
+            "_rightSideInputGUID": "c871d865-b9e6-4e6b-af7f-2efef6266bdf",
+            "_outputGUID": "b60f15e1-a8c3-4ace-adb8-77ffb4fc6a6a",
+            "_op": 2
+        },
+        {
+            "_guid": "c027c336-fe1d-49e2-a4e5-1cae7410c2e3",
+            "_name": "AttackPart3",
+            "_leftSideInputGUID": "18d098d7-5df7-4817-bd64-31ecc6418d87",
+            "_rightSideInputGUID": "cd4b7de5-3727-4b07-9411-1a2e94952f65",
+            "_outputGUID": "c027c336-fe1d-49e2-a4e5-1cae7410c2e3",
+            "_op": 1
+        },
+        {
+            "_guid": "cd4b7de5-3727-4b07-9411-1a2e94952f65",
+            "_name": "EnemySlower",
+            "_leftSideInputGUID": "cbc9e062-763c-42b9-b084-af2196070c29",
+            "_rightSideInputGUID": "581ccd38-23cd-46c1-a260-3aeee8174418",
+            "_outputGUID": "cd4b7de5-3727-4b07-9411-1a2e94952f65",
+            "_op": 3
+        },
+        {
+            "_guid": "c0b2e04f-795f-4e65-a396-f90a5f7e67d4",
+            "_name": "AttackFusion",
+            "_leftSideInputGUID": "e8bc1106-e9ac-42ba-8554-c65235305499",
+            "_rightSideInputGUID": "2eef3329-9458-40c2-9ee8-c04d5433b6f3",
+            "_outputGUID": "c0b2e04f-795f-4e65-a396-f90a5f7e67d4",
+            "_op": 2
+        },
+        {
+            "_guid": "88a423f3-d56c-4f44-83e2-6ad4bdc08491",
+            "_name": "DefendPart1",
+            "_leftSideInputGUID": "021f1b1c-0b72-46a2-855c-c286c5baa886",
+            "_rightSideInputGUID": "5fde5d88-7d75-48df-abd0-7d8d03fb83d7",
+            "_outputGUID": "88a423f3-d56c-4f44-83e2-6ad4bdc08491",
+            "_op": 1
+        },
+        {
+            "_guid": "11b2aeb3-bf41-437e-a6a7-a5eb29b58983",
+            "_name": "EnemyHighCrit",
+            "_leftSideInputGUID": "c83d0e0b-7321-4bf0-9243-04e4e7b44ef1",
+            "_rightSideInputGUID": "d86d895f-b280-4b76-ae4e-9e32e6016b51",
+            "_outputGUID": "11b2aeb3-bf41-437e-a6a7-a5eb29b58983",
+            "_op": 2
+        },
+        {
+            "_guid": "28dc197e-3ef0-45ca-8c76-83c780a6065b",
+            "_name": "EnemyHighMult",
+            "_leftSideInputGUID": "72b95b24-f82d-4ae1-aa7c-0bc0c5157ede",
+            "_rightSideInputGUID": "d2f66d26-9a5e-416d-968a-9bb0a0302298",
+            "_outputGUID": "28dc197e-3ef0-45ca-8c76-83c780a6065b",
+            "_op": 2
+        },
+        {
+            "_guid": "ddbdfeae-6d7b-49f7-8662-8ecb0552f8f9",
+            "_name": "DefendPart2",
+            "_leftSideInputGUID": "11b2aeb3-bf41-437e-a6a7-a5eb29b58983",
+            "_rightSideInputGUID": "28dc197e-3ef0-45ca-8c76-83c780a6065b",
+            "_outputGUID": "ddbdfeae-6d7b-49f7-8662-8ecb0552f8f9",
+            "_op": 1
+        },
+        {
+            "_guid": "85e89e73-4c9a-4b49-aa39-2eb48c37cc1d",
+            "_name": "HealPart1",
+            "_leftSideInputGUID": "fe2ad9df-d910-48dc-834e-068c42e4de3f",
+            "_rightSideInputGUID": "46bda375-d472-4eb7-87fc-08bf90bf79bf",
+            "_outputGUID": "85e89e73-4c9a-4b49-aa39-2eb48c37cc1d",
+            "_op": 1
+        },
+        {
+            "_guid": "fe2ad9df-d910-48dc-834e-068c42e4de3f",
+            "_name": "DangerousOrRisky",
+            "_leftSideInputGUID": "581ccd38-23cd-46c1-a260-3aeee8174418",
+            "_rightSideInputGUID": "da866e00-b5d7-45ab-8a98-a32c204eadf3",
+            "_outputGUID": "fe2ad9df-d910-48dc-834e-068c42e4de3f",
+            "_op": 2
+        },
+        {
+            "_guid": "46bda375-d472-4eb7-87fc-08bf90bf79bf",
+            "_name": "HigherThanMed",
+            "_leftSideInputGUID": "2cf654a9-628d-4c5b-8966-59212ff2a335",
+            "_rightSideInputGUID": "3d2d9766-1e18-4533-84c9-7a248bce1492",
+            "_outputGUID": "46bda375-d472-4eb7-87fc-08bf90bf79bf",
+            "_op": 2
+        },
+        {
+            "_guid": "6cb6269f-82c9-4844-89f1-aa44cc322274",
+            "_name": "HealPart2",
+            "_leftSideInputGUID": "581ccd38-23cd-46c1-a260-3aeee8174418",
+            "_rightSideInputGUID": "7337393c-af91-4a56-a3ca-c7db6aaf7709",
+            "_outputGUID": "6cb6269f-82c9-4844-89f1-aa44cc322274",
+            "_op": 1
+        },
+        {
+            "_guid": "aa11d07c-bbf6-4c94-ba14-55ec3636f454",
+            "_name": "BuffPart1",
+            "_leftSideInputGUID": "030859b4-8c82-4f9d-901d-2f804b852531",
+            "_rightSideInputGUID": "2cf654a9-628d-4c5b-8966-59212ff2a335",
+            "_outputGUID": "aa11d07c-bbf6-4c94-ba14-55ec3636f454",
+            "_op": 1
+        },
+        {
+            "_guid": "8accb1b3-d969-446f-bfa8-fe88f7b3cecd",
+            "_name": "BuffPart2",
+            "_leftSideInputGUID": "5ca89631-673c-4b1b-a257-b8d9df47082d",
+            "_rightSideInputGUID": "2cf654a9-628d-4c5b-8966-59212ff2a335",
+            "_outputGUID": "8accb1b3-d969-446f-bfa8-fe88f7b3cecd",
+            "_op": 1
+        },
+        {
+            "_guid": "c4c5039a-e392-4de7-bffb-c3925b04d574",
+            "_name": "DebuffPart1",
+            "_leftSideInputGUID": "5ca89631-673c-4b1b-a257-b8d9df47082d",
+            "_rightSideInputGUID": "cd4b7de5-3727-4b07-9411-1a2e94952f65",
+            "_outputGUID": "c4c5039a-e392-4de7-bffb-c3925b04d574",
+            "_op": 1
+        },
+        {
+            "_guid": "0f9abb08-7c31-4074-a3eb-02dce2799a0b",
+            "_name": "DebuffPart2",
+            "_leftSideInputGUID": "da866e00-b5d7-45ab-8a98-a32c204eadf3",
+            "_rightSideInputGUID": "7337393c-af91-4a56-a3ca-c7db6aaf7709",
+            "_outputGUID": "0f9abb08-7c31-4074-a3eb-02dce2799a0b",
+            "_op": 1
         }
     ],
     "_guid": "ed665bd4-aa80-4ac4-a428-11c4d5aa4fe5",

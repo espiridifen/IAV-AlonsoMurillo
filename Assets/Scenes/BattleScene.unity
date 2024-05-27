@@ -1681,17 +1681,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 560415178}
   m_CullTransparentMesh: 1
---- !u!114 &575653205 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1169946812716478653, guid: 1f8f0bd4c88312f4faceae97c9743cd4, type: 3}
-  m_PrefabInstance: {fileID: 1217543614}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 281288052}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 012fbba8b353cc341a98e0f3e132d6cd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &575653209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1704,8 +1693,53 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5574cfb9a206f5f429edc8837fe73c64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fuzzyLogicData: {fileID: 4900000, guid: 6928e9411d993441696520343ac2b6b9, type: 3}
-  enemy: {fileID: 575653205}
+  fuzzyLogicData: {fileID: 4900000, guid: b117d5fa1f7ae4c15be27afff8709668, type: 3}
+  enemy: {fileID: 575653210}
+--- !u!114 &575653210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 281288052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac73184c8056c9d4c99f9345dcc7de3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  charName: MonsterDuck
+  currentHealth: 100
+  currentMana: 100
+  maxHealthStat:
+    BaseValue: 100
+    _value: 100
+  maxManaStat:
+    BaseValue: 100
+    _value: 100
+  physicalAttackStat:
+    BaseValue: 20
+    _value: 0
+  physicalDefenseStat:
+    BaseValue: 0
+    _value: 0
+  speedStat:
+    BaseValue: 12
+    _value: 0
+  criticalStat:
+    BaseValue: 0
+    _value: 0
+  evasionStat:
+    BaseValue: 0
+    _value: 0
+  baseDamageMultiplier: 1
+  critDamageMultiplier: 1.25
+  abilitiesData: []
+  _startPositionOffsetMax: 3
+  _startPositionOffsetMin: 1
+  _healAmount: 10
+  _healCost: 30
+  _buffCost: 30
+  _debuffCost: 30
 --- !u!114 &588965294 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1169946812716478653, guid: 1f8f0bd4c88312f4faceae97c9743cd4, type: 3}
@@ -3615,9 +3649,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1169946812716478648, guid: 1f8f0bd4c88312f4faceae97c9743cd4, type: 3}
+    - {fileID: 1169946812716478653, guid: 1f8f0bd4c88312f4faceae97c9743cd4, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1169946812716478650, guid: 1f8f0bd4c88312f4faceae97c9743cd4, type: 3}
+      insertIndex: 2
+      addedObject: {fileID: 575653210}
     - targetCorrespondingSourceObject: {fileID: 1169946812716478650, guid: 1f8f0bd4c88312f4faceae97c9743cd4, type: 3}
       insertIndex: -1
       addedObject: {fileID: 575653209}
@@ -5814,7 +5852,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemies:
   - {fileID: 588965294}
-  - {fileID: 575653205}
+  - {fileID: 575653210}
   heroes:
   - {fileID: 235420623}
   - {fileID: 1562885494}

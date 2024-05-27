@@ -4,7 +4,7 @@
             "_division": 10,
             "_maxValue": 100,
             "_guid": "db7f7876-bdb1-41db-9ff3-8c0460d97ac0",
-            "_name": "",
+            "_name": "CurrentHP",
             "_value": 54.20000076293945,
             "trapezoids": [
                 {
@@ -15,10 +15,24 @@
                         "b": 0.0,
                         "a": 1.0
                     },
-                    "_name": "",
+                    "_name": "Danger",
                     "_peakPointLeftValue": 0.0,
                     "_footPointLeftValue": 0.0,
-                    "_peakPointRightValue": 20.0,
+                    "_peakPointRightValue": 30.0,
+                    "_footPointRightValue": 40.0
+                },
+                {
+                    "_guid": "f08d5819-7f93-4ae5-88ad-b0137cfac427",
+                    "_color": {
+                        "r": 0.1448141485452652,
+                        "g": 0.09495605528354645,
+                        "b": 0.4955224394798279,
+                        "a": 1.0
+                    },
+                    "_name": "Risky",
+                    "_peakPointLeftValue": 40.0,
+                    "_footPointLeftValue": 30.0,
+                    "_peakPointRightValue": 60.0,
                     "_footPointRightValue": 80.0
                 },
                 {
@@ -29,9 +43,9 @@
                         "b": 0.0,
                         "a": 1.0
                     },
-                    "_name": "",
+                    "_name": "Healthy",
                     "_peakPointLeftValue": 80.0,
-                    "_footPointLeftValue": 20.0,
+                    "_footPointLeftValue": 60.0,
                     "_peakPointRightValue": 100.0,
                     "_footPointRightValue": 100.0
                 }
@@ -41,7 +55,7 @@
             "_division": 10,
             "_maxValue": 100,
             "_guid": "490e24af-25ff-4209-b9a6-a92ceb761c05",
-            "_name": "",
+            "_name": "EnemyHP",
             "_value": 37.0,
             "trapezoids": [
                 {
@@ -52,10 +66,24 @@
                         "b": 0.0,
                         "a": 1.0
                     },
-                    "_name": "",
+                    "_name": "Danger",
                     "_peakPointLeftValue": 0.0,
                     "_footPointLeftValue": 0.0,
-                    "_peakPointRightValue": 20.0,
+                    "_peakPointRightValue": 30.0,
+                    "_footPointRightValue": 40.0
+                },
+                {
+                    "_guid": "92d3a78f-4abd-4cef-821b-89e691e29383",
+                    "_color": {
+                        "r": 0.6414118409156799,
+                        "g": 0.6866539120674133,
+                        "b": 0.4122341275215149,
+                        "a": 1.0
+                    },
+                    "_name": "Risky",
+                    "_peakPointLeftValue": 40.0,
+                    "_footPointLeftValue": 30.0,
+                    "_peakPointRightValue": 60.0,
                     "_footPointRightValue": 80.0
                 },
                 {
@@ -66,11 +94,549 @@
                         "b": 1.0,
                         "a": 1.0
                     },
-                    "_name": "",
+                    "_name": "Healthy",
                     "_peakPointLeftValue": 80.0,
-                    "_footPointLeftValue": 20.0,
+                    "_footPointLeftValue": 60.0,
                     "_peakPointRightValue": 100.0,
                     "_footPointRightValue": 100.0
+                }
+            ]
+        },
+        {
+            "_division": 10,
+            "_maxValue": 100,
+            "_guid": "39f3764b-308c-4d69-86ab-03a02c579270",
+            "_name": "CurrentMana",
+            "_value": 0.0,
+            "trapezoids": [
+                {
+                    "_guid": "c9c8256e-f72e-4dc9-9e8e-ebd267808e5b",
+                    "_color": {
+                        "r": 1.0,
+                        "g": 0.0,
+                        "b": 0.0,
+                        "a": 1.0
+                    },
+                    "_name": "Out",
+                    "_peakPointLeftValue": 0.0,
+                    "_footPointLeftValue": 0.0,
+                    "_peakPointRightValue": 1.0,
+                    "_footPointRightValue": 10.0
+                },
+                {
+                    "_guid": "e477b0fb-4942-4b04-9b18-525e07903a09",
+                    "_color": {
+                        "r": 0.3071806728839874,
+                        "g": 0.0666893795132637,
+                        "b": 0.47374969720840456,
+                        "a": 1.0
+                    },
+                    "_name": "Low",
+                    "_peakPointLeftValue": 10.0,
+                    "_footPointLeftValue": 1.0,
+                    "_peakPointRightValue": 30.0,
+                    "_footPointRightValue": 40.0
+                },
+                {
+                    "_guid": "4df5c3dc-0872-47f8-9728-277ff24cbefe",
+                    "_color": {
+                        "r": 0.6911655068397522,
+                        "g": 0.9302901029586792,
+                        "b": 0.754730224609375,
+                        "a": 1.0
+                    },
+                    "_name": "Medium",
+                    "_peakPointLeftValue": 40.0,
+                    "_footPointLeftValue": 30.0,
+                    "_peakPointRightValue": 70.0,
+                    "_footPointRightValue": 80.0
+                },
+                {
+                    "_guid": "e1aadfe1-f03e-4842-ac50-a3d4d43db2cc",
+                    "_color": {
+                        "r": 0.0,
+                        "g": 1.0,
+                        "b": 0.0,
+                        "a": 1.0
+                    },
+                    "_name": "Max",
+                    "_peakPointLeftValue": 80.0,
+                    "_footPointLeftValue": 70.0,
+                    "_peakPointRightValue": 100.0,
+                    "_footPointRightValue": 100.0
+                }
+            ]
+        },
+        {
+            "_division": 10,
+            "_maxValue": 100,
+            "_guid": "e6cb7f87-02d2-4f92-baae-fd4442aebd7a",
+            "_name": "EnemyMana",
+            "_value": 0.0,
+            "trapezoids": [
+                {
+                    "_guid": "7ddc1c61-d474-4691-b966-fdb93874b58b",
+                    "_color": {
+                        "r": 1.0,
+                        "g": 0.0,
+                        "b": 0.0,
+                        "a": 1.0
+                    },
+                    "_name": "Out",
+                    "_peakPointLeftValue": 0.0,
+                    "_footPointLeftValue": 0.0,
+                    "_peakPointRightValue": 1.0,
+                    "_footPointRightValue": 10.0
+                },
+                {
+                    "_guid": "3b27111a-1b0c-4daa-a392-e8c8366b705d",
+                    "_color": {
+                        "r": 0.27540603280067446,
+                        "g": 0.688772976398468,
+                        "b": 0.05280054360628128,
+                        "a": 1.0
+                    },
+                    "_name": "Low",
+                    "_peakPointLeftValue": 10.0,
+                    "_footPointLeftValue": 1.0,
+                    "_peakPointRightValue": 30.0,
+                    "_footPointRightValue": 40.0
+                },
+                {
+                    "_guid": "c797a98e-28c5-4cbb-9e79-01f0684faa7e",
+                    "_color": {
+                        "r": 0.23493602871894837,
+                        "g": 0.7972095012664795,
+                        "b": 0.24242261052131654,
+                        "a": 1.0
+                    },
+                    "_name": "Medium",
+                    "_peakPointLeftValue": 40.0,
+                    "_footPointLeftValue": 30.0,
+                    "_peakPointRightValue": 70.0,
+                    "_footPointRightValue": 80.0
+                },
+                {
+                    "_guid": "7d37950e-1dbf-41be-ab19-1af290232e99",
+                    "_color": {
+                        "r": 0.0,
+                        "g": 1.0,
+                        "b": 0.0,
+                        "a": 1.0
+                    },
+                    "_name": "Max",
+                    "_peakPointLeftValue": 80.0,
+                    "_footPointLeftValue": 70.0,
+                    "_peakPointRightValue": 100.0,
+                    "_footPointRightValue": 100.0
+                }
+            ]
+        },
+        {
+            "_division": 10,
+            "_maxValue": 100,
+            "_guid": "a0babeea-be8b-46b6-8596-19de1686be56",
+            "_name": "Speed",
+            "_value": 0.0,
+            "trapezoids": [
+                {
+                    "_guid": "a802de2e-2331-4b55-a2b1-f0652b0fbb27",
+                    "_color": {
+                        "r": 1.0,
+                        "g": 0.0,
+                        "b": 0.0,
+                        "a": 1.0
+                    },
+                    "_name": "Slow",
+                    "_peakPointLeftValue": 0.0,
+                    "_footPointLeftValue": 0.0,
+                    "_peakPointRightValue": 20.0,
+                    "_footPointRightValue": 40.0
+                },
+                {
+                    "_guid": "f19ab930-2d57-459c-80ed-fee44cce077e",
+                    "_color": {
+                        "r": 0.04505467787384987,
+                        "g": 0.44412165880203249,
+                        "b": 0.20210006833076478,
+                        "a": 1.0
+                    },
+                    "_name": "Normal",
+                    "_peakPointLeftValue": 40.0,
+                    "_footPointLeftValue": 20.0,
+                    "_peakPointRightValue": 60.0,
+                    "_footPointRightValue": 80.0
+                },
+                {
+                    "_guid": "d97bca9a-37df-4f1a-8505-0a42bf1f195e",
+                    "_color": {
+                        "r": 0.0,
+                        "g": 1.0,
+                        "b": 0.0,
+                        "a": 1.0
+                    },
+                    "_name": "Fast",
+                    "_peakPointLeftValue": 80.0,
+                    "_footPointLeftValue": 60.0,
+                    "_peakPointRightValue": 100.0,
+                    "_footPointRightValue": 100.0
+                }
+            ]
+        },
+        {
+            "_division": 10,
+            "_maxValue": 100,
+            "_guid": "06feb6c0-ec8d-4acb-b30c-b59cd3b29378",
+            "_name": "EnemySpeed",
+            "_value": 0.0,
+            "trapezoids": [
+                {
+                    "_guid": "c776adb5-3e39-43ee-8061-c7e802f31ad6",
+                    "_color": {
+                        "r": 1.0,
+                        "g": 0.0,
+                        "b": 0.0,
+                        "a": 1.0
+                    },
+                    "_name": "Slow",
+                    "_peakPointLeftValue": 0.0,
+                    "_footPointLeftValue": 0.0,
+                    "_peakPointRightValue": 20.0,
+                    "_footPointRightValue": 50.0
+                },
+                {
+                    "_guid": "f18406e7-852d-43d3-92a9-8238c90e2b39",
+                    "_color": {
+                        "r": 0.8812459707260132,
+                        "g": 0.8115628957748413,
+                        "b": 0.8759161233901978,
+                        "a": 1.0
+                    },
+                    "_name": "Normal",
+                    "_peakPointLeftValue": 50.0,
+                    "_footPointLeftValue": 20.0,
+                    "_peakPointRightValue": 50.0,
+                    "_footPointRightValue": 80.0
+                },
+                {
+                    "_guid": "5f7be004-2d88-4e95-8801-4c506000fda0",
+                    "_color": {
+                        "r": 0.0,
+                        "g": 1.0,
+                        "b": 0.0,
+                        "a": 1.0
+                    },
+                    "_name": "Fast",
+                    "_peakPointLeftValue": 80.0,
+                    "_footPointLeftValue": 50.0,
+                    "_peakPointRightValue": 100.0,
+                    "_footPointRightValue": 100.0
+                }
+            ]
+        },
+        {
+            "_division": 10,
+            "_maxValue": 100,
+            "_guid": "81ee57e5-0c45-416b-869c-796c66a142b0",
+            "_name": "Defense",
+            "_value": 0.0,
+            "trapezoids": [
+                {
+                    "_guid": "7ce90c31-dacc-4817-9d27-1637bec9528f",
+                    "_color": {
+                        "r": 1.0,
+                        "g": 0.0,
+                        "b": 0.0,
+                        "a": 1.0
+                    },
+                    "_name": "Fragile",
+                    "_peakPointLeftValue": 0.0,
+                    "_footPointLeftValue": 0.0,
+                    "_peakPointRightValue": 20.0,
+                    "_footPointRightValue": 50.0
+                },
+                {
+                    "_guid": "78ad3e02-6980-47e3-94b9-65b20b6db718",
+                    "_color": {
+                        "r": 0.8359163999557495,
+                        "g": 0.09759010374546051,
+                        "b": 0.21206465363502503,
+                        "a": 1.0
+                    },
+                    "_name": "Normal",
+                    "_peakPointLeftValue": 50.0,
+                    "_footPointLeftValue": 20.0,
+                    "_peakPointRightValue": 50.0,
+                    "_footPointRightValue": 80.0
+                },
+                {
+                    "_guid": "30e0a7a1-a9bc-4e53-895b-88efc9c9c815",
+                    "_color": {
+                        "r": 0.0,
+                        "g": 1.0,
+                        "b": 0.0,
+                        "a": 1.0
+                    },
+                    "_name": "Tank",
+                    "_peakPointLeftValue": 80.0,
+                    "_footPointLeftValue": 50.0,
+                    "_peakPointRightValue": 100.0,
+                    "_footPointRightValue": 100.0
+                }
+            ]
+        },
+        {
+            "_division": 10,
+            "_maxValue": 100,
+            "_guid": "8a23b8ef-ef3e-4363-8b64-432dd171c5b7",
+            "_name": "EnemyDefense",
+            "_value": 0.0,
+            "trapezoids": [
+                {
+                    "_guid": "c0704f21-835b-4022-b580-b36a9c1c93e5",
+                    "_color": {
+                        "r": 1.0,
+                        "g": 0.0,
+                        "b": 0.0,
+                        "a": 1.0
+                    },
+                    "_name": "Fragile",
+                    "_peakPointLeftValue": 0.0,
+                    "_footPointLeftValue": 0.0,
+                    "_peakPointRightValue": 20.0,
+                    "_footPointRightValue": 50.0
+                },
+                {
+                    "_guid": "91cd81ee-02fd-4b3d-b8c6-0df06223467b",
+                    "_color": {
+                        "r": 0.42627793550491335,
+                        "g": 0.3481656610965729,
+                        "b": 0.029108528047800065,
+                        "a": 1.0
+                    },
+                    "_name": "Normal",
+                    "_peakPointLeftValue": 50.0,
+                    "_footPointLeftValue": 20.0,
+                    "_peakPointRightValue": 50.0,
+                    "_footPointRightValue": 80.0
+                },
+                {
+                    "_guid": "ab0578f1-d392-441c-bbcb-5f535752c85c",
+                    "_color": {
+                        "r": 0.0,
+                        "g": 1.0,
+                        "b": 0.0,
+                        "a": 1.0
+                    },
+                    "_name": "Tank",
+                    "_peakPointLeftValue": 80.0,
+                    "_footPointLeftValue": 50.0,
+                    "_peakPointRightValue": 100.0,
+                    "_footPointRightValue": 100.0
+                }
+            ]
+        },
+        {
+            "_division": 10,
+            "_maxValue": 100,
+            "_guid": "411519cb-04ce-4bc3-bb9c-d6c1a86dc831",
+            "_name": "CriticalChance",
+            "_value": 0.0,
+            "trapezoids": [
+                {
+                    "_guid": "852b8f90-65e0-42c7-aa71-3aac1c375e53",
+                    "_color": {
+                        "r": 1.0,
+                        "g": 0.0,
+                        "b": 0.0,
+                        "a": 1.0
+                    },
+                    "_name": "Low",
+                    "_peakPointLeftValue": 0.0,
+                    "_footPointLeftValue": 0.0,
+                    "_peakPointRightValue": 20.0,
+                    "_footPointRightValue": 25.0
+                },
+                {
+                    "_guid": "49f1aeab-413f-4c78-8a2f-7701e78ffef6",
+                    "_color": {
+                        "r": 0.39302724599838259,
+                        "g": 0.5926560759544373,
+                        "b": 0.9170637130737305,
+                        "a": 1.0
+                    },
+                    "_name": "Medium",
+                    "_peakPointLeftValue": 25.0,
+                    "_footPointLeftValue": 20.0,
+                    "_peakPointRightValue": 50.0,
+                    "_footPointRightValue": 50.0
+                },
+                {
+                    "_guid": "b7ccd8cd-ce01-4056-8268-fabd3e00fed7",
+                    "_color": {
+                        "r": 0.0,
+                        "g": 1.0,
+                        "b": 0.0,
+                        "a": 1.0
+                    },
+                    "_name": "High",
+                    "_peakPointLeftValue": 50.0,
+                    "_footPointLeftValue": 50.0,
+                    "_peakPointRightValue": 100.0,
+                    "_footPointRightValue": 100.0
+                }
+            ]
+        },
+        {
+            "_division": 10,
+            "_maxValue": 100,
+            "_guid": "11dc0c86-8b49-48f7-86ce-6176d9efc2eb",
+            "_name": "EnemyCriticalChance",
+            "_value": 0.0,
+            "trapezoids": [
+                {
+                    "_guid": "fddcae41-6a3c-4db6-bca4-e623215cf318",
+                    "_color": {
+                        "r": 1.0,
+                        "g": 0.0,
+                        "b": 0.0,
+                        "a": 1.0
+                    },
+                    "_name": "Low",
+                    "_peakPointLeftValue": 0.0,
+                    "_footPointLeftValue": 0.0,
+                    "_peakPointRightValue": 20.0,
+                    "_footPointRightValue": 25.0
+                },
+                {
+                    "_guid": "e46248a9-dd21-4792-82c7-d2817a8fff91",
+                    "_color": {
+                        "r": 0.21226933598518372,
+                        "g": 0.97716224193573,
+                        "b": 0.9355481863021851,
+                        "a": 1.0
+                    },
+                    "_name": "Medium",
+                    "_peakPointLeftValue": 25.0,
+                    "_footPointLeftValue": 20.0,
+                    "_peakPointRightValue": 50.0,
+                    "_footPointRightValue": 50.0
+                },
+                {
+                    "_guid": "29e161cc-b893-4b67-a3fb-fcde12875c1d",
+                    "_color": {
+                        "r": 0.0,
+                        "g": 1.0,
+                        "b": 0.0,
+                        "a": 1.0
+                    },
+                    "_name": "High",
+                    "_peakPointLeftValue": 50.0,
+                    "_footPointLeftValue": 50.0,
+                    "_peakPointRightValue": 100.0,
+                    "_footPointRightValue": 100.0
+                }
+            ]
+        },
+        {
+            "_division": 10,
+            "_maxValue": 300,
+            "_guid": "98ce646b-b1d3-461a-986d-3f34f2d9cbe3",
+            "_name": "CritMultiplier",
+            "_value": 0.0,
+            "trapezoids": [
+                {
+                    "_guid": "cabdac05-5735-421b-8549-b2d317984e96",
+                    "_color": {
+                        "r": 1.0,
+                        "g": 0.0,
+                        "b": 0.0,
+                        "a": 1.0
+                    },
+                    "_name": "Low",
+                    "_peakPointLeftValue": 0.0,
+                    "_footPointLeftValue": 0.0,
+                    "_peakPointRightValue": 125.0,
+                    "_footPointRightValue": 140.0
+                },
+                {
+                    "_guid": "cf27858b-3102-4739-ae39-750ce59e83d5",
+                    "_color": {
+                        "r": 0.6476108431816101,
+                        "g": 0.060317523777484897,
+                        "b": 0.7849342823028565,
+                        "a": 1.0
+                    },
+                    "_name": "Medium",
+                    "_peakPointLeftValue": 140.0,
+                    "_footPointLeftValue": 125.0,
+                    "_peakPointRightValue": 150.0,
+                    "_footPointRightValue": 160.0
+                },
+                {
+                    "_guid": "c48fee83-4afd-4cf5-859e-f0ff1ef28da1",
+                    "_color": {
+                        "r": 0.0,
+                        "g": 1.0,
+                        "b": 0.0,
+                        "a": 1.0
+                    },
+                    "_name": "High",
+                    "_peakPointLeftValue": 160.0,
+                    "_footPointLeftValue": 150.0,
+                    "_peakPointRightValue": 300.0,
+                    "_footPointRightValue": 300.0
+                }
+            ]
+        },
+        {
+            "_division": 10,
+            "_maxValue": 300,
+            "_guid": "d9187cd5-d00f-467b-87f3-a05d4cd9748c",
+            "_name": "EnemyCritMultiplier",
+            "_value": 0.0,
+            "trapezoids": [
+                {
+                    "_guid": "0f83f907-10a2-42a3-af70-efa96a488d1d",
+                    "_color": {
+                        "r": 1.0,
+                        "g": 0.0,
+                        "b": 0.0,
+                        "a": 1.0
+                    },
+                    "_name": "Low",
+                    "_peakPointLeftValue": 0.0,
+                    "_footPointLeftValue": 0.0,
+                    "_peakPointRightValue": 125.0,
+                    "_footPointRightValue": 140.0
+                },
+                {
+                    "_guid": "40643d8f-a6b9-4471-aedf-957badf4f2c0",
+                    "_color": {
+                        "r": 0.8016395568847656,
+                        "g": 0.10768963396549225,
+                        "b": 0.8621411323547363,
+                        "a": 1.0
+                    },
+                    "_name": "Medium",
+                    "_peakPointLeftValue": 140.0,
+                    "_footPointLeftValue": 125.0,
+                    "_peakPointRightValue": 150.0,
+                    "_footPointRightValue": 160.0
+                },
+                {
+                    "_guid": "13b5c34a-b8cb-4011-a70f-8f6807e538be",
+                    "_color": {
+                        "r": 0.0,
+                        "g": 1.0,
+                        "b": 0.0,
+                        "a": 1.0
+                    },
+                    "_name": "High",
+                    "_peakPointLeftValue": 160.0,
+                    "_footPointLeftValue": 150.0,
+                    "_peakPointRightValue": 300.0,
+                    "_footPointRightValue": 300.0
                 }
             ]
         }
@@ -90,11 +656,25 @@
                     "b": 0.0,
                     "a": 1.0
                 },
-                "_name": "",
+                "_name": "Attack",
                 "_peakPointLeftValue": 0.0,
-                "_footPointLeftValue": -25.0,
+                "_footPointLeftValue": -50.0,
                 "_peakPointRightValue": 0.0,
-                "_footPointRightValue": 25.0
+                "_footPointRightValue": 37.5
+            },
+            {
+                "_guid": "7a92b93c-68ff-47ac-affd-3d78d56277ff",
+                "_color": {
+                    "r": 0.9199552536010742,
+                    "g": 0.3412649929523468,
+                    "b": 0.9695847034454346,
+                    "a": 1.0
+                },
+                "_name": "Spell",
+                "_peakPointLeftValue": 52.29999923706055,
+                "_footPointLeftValue": 19.899999618530275,
+                "_peakPointRightValue": 59.400001525878909,
+                "_footPointRightValue": 74.5
             },
             {
                 "_guid": "ffaacbfa-4d3a-47d7-b976-db3ffce95f93",
@@ -104,11 +684,11 @@
                     "b": 0.0,
                     "a": 1.0
                 },
-                "_name": "",
-                "_peakPointLeftValue": 100.0,
-                "_footPointLeftValue": 75.0,
-                "_peakPointRightValue": 100.0,
-                "_footPointRightValue": 125.0
+                "_name": "Heal",
+                "_peakPointLeftValue": 80.0,
+                "_footPointLeftValue": 68.0999984741211,
+                "_peakPointRightValue": 150.0,
+                "_footPointRightValue": 150.0
             }
         ],
         "_subdivision": 40
@@ -140,5 +720,5 @@
         }
     ],
     "_guid": "3eb9316f-65ab-40d0-b90a-24d2a11ecd8c",
-    "_name": ""
+    "_name": "EnemyFuzzyBrain2"
 }

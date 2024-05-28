@@ -1707,7 +1707,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac73184c8056c9d4c99f9345dcc7de3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  charName: MonsterDuck
+  charName: Angry Birb
   currentHealth: 100
   currentMana: 100
   maxHealthStat:
@@ -3632,6 +3632,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1169946812716478655, guid: 1f8f0bd4c88312f4faceae97c9743cd4, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1169946812716478655, guid: 1f8f0bd4c88312f4faceae97c9743cd4, type: 3}
       propertyPath: m_Size.x
       value: 0.64
       objectReference: {fileID: 0}
@@ -3642,7 +3646,7 @@ PrefabInstance:
     - target: {fileID: 1169946812716478655, guid: 1f8f0bd4c88312f4faceae97c9743cd4, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: c3e5dafea9e31564ab7f12cdde380b66, type: 3}
+      objectReference: {fileID: 21300000, guid: e6d457269fac60c49a74d4ad8afcb44d, type: 3}
     - target: {fileID: 1169946812716478655, guid: 1f8f0bd4c88312f4faceae97c9743cd4, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -4923,7 +4927,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: e197fcf2a5e71fc48871031c5dbc264d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2b4c91aaa980c7348a61db76e10b4299, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -4997,23 +5001,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74b59fd9362be664f8a161cdfc12a153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  charName: DualSword
+  charName: Willy Toledo
   currentHealth: 100
   currentMana: 100
   maxHealthStat:
-    BaseValue: 100
+    BaseValue: 350
     _value: 0
   maxManaStat:
-    BaseValue: 100
+    BaseValue: 50
     _value: 0
   physicalAttackStat:
-    BaseValue: 0
+    BaseValue: 15
     _value: 0
   physicalDefenseStat:
-    BaseValue: 0
+    BaseValue: 30
     _value: 0
   speedStat:
-    BaseValue: 30
+    BaseValue: 20
     _value: 0
   criticalStat:
     BaseValue: 0
@@ -6733,6 +6737,14 @@ PrefabInstance:
       value: MonsterCrow
       objectReference: {fileID: 0}
     - target: {fileID: 1169946812716478653, guid: 1f8f0bd4c88312f4faceae97c9743cd4, type: 3}
+      propertyPath: charName
+      value: Scared Bee
+      objectReference: {fileID: 0}
+    - target: {fileID: 1169946812716478653, guid: 1f8f0bd4c88312f4faceae97c9743cd4, type: 3}
+      propertyPath: _healAmount
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1169946812716478653, guid: 1f8f0bd4c88312f4faceae97c9743cd4, type: 3}
       propertyPath: maxManaStat._value
       value: 100
       objectReference: {fileID: 0}
@@ -6813,6 +6825,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1169946812716478655, guid: 1f8f0bd4c88312f4faceae97c9743cd4, type: 3}
+      propertyPath: m_FlipX
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1169946812716478655, guid: 1f8f0bd4c88312f4faceae97c9743cd4, type: 3}
       propertyPath: m_Size.x
       value: 0.64
       objectReference: {fileID: 0}
@@ -6823,7 +6839,7 @@ PrefabInstance:
     - target: {fileID: 1169946812716478655, guid: 1f8f0bd4c88312f4faceae97c9743cd4, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: c3e5dafea9e31564ab7f12cdde380b66, type: 3}
+      objectReference: {fileID: 21300000, guid: 3a4ad8dc185aeb0489caf8e9be24def1, type: 3}
     - target: {fileID: 1169946812716478655, guid: 1f8f0bd4c88312f4faceae97c9743cd4, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
@@ -7011,6 +7027,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 9100000, guid: f3f9b49bbc7b1d64e8418fe4211f0d39, type: 2}
     - target: {fileID: 6183194970535629201, guid: cee0d94bda1949e44a630a006283a75d, type: 3}
+      propertyPath: charName
+      value: Alayna
+      objectReference: {fileID: 0}
+    - target: {fileID: 6183194970535629201, guid: cee0d94bda1949e44a630a006283a75d, type: 3}
       propertyPath: _moveOffset
       value: 3
       objectReference: {fileID: 0}
@@ -7024,19 +7044,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6183194970535629201, guid: cee0d94bda1949e44a630a006283a75d, type: 3}
       propertyPath: evasionStat.BaseValue
-      value: 300
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6183194970535629201, guid: cee0d94bda1949e44a630a006283a75d, type: 3}
       propertyPath: maxManaStat.BaseValue
-      value: 9999
+      value: 250
       objectReference: {fileID: 0}
     - target: {fileID: 6183194970535629201, guid: cee0d94bda1949e44a630a006283a75d, type: 3}
       propertyPath: criticalStat.BaseValue
-      value: 100
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 6183194970535629201, guid: cee0d94bda1949e44a630a006283a75d, type: 3}
       propertyPath: maxHealthStat.BaseValue
-      value: 1000
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 6183194970535629201, guid: cee0d94bda1949e44a630a006283a75d, type: 3}
       propertyPath: abilitiesData.Array.size
@@ -7056,7 +7076,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: d6c0c83d1467b364b81b0c2e15352193, type: 2}
     - target: {fileID: 6183194970535629201, guid: cee0d94bda1949e44a630a006283a75d, type: 3}
       propertyPath: physicalAttackStat.BaseValue
-      value: 100
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6183194970535629201, guid: cee0d94bda1949e44a630a006283a75d, type: 3}
       propertyPath: physicalDefenseStat.BaseValue

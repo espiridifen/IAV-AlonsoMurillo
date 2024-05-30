@@ -76,7 +76,7 @@ public class EnemyBrain : MonoBehaviour
         fuzzyLogic.GetFuzzificationByName("Speed").value = enemy.Speed;
         fuzzyLogic.GetFuzzificationByName("Defense").value = enemy.Defense;
         fuzzyLogic.GetFuzzificationByName("CriticalChance").value = enemy.Critical*100;
-        fuzzyLogic.GetFuzzificationByName("CritMultiplier").value = enemy.critDamage;
+        fuzzyLogic.GetFuzzificationByName("CritMultiplier").value = enemy.critDamage*100;
         fuzzyLogic.GetFuzzificationByName("EnemyHP").value = target.CurrentHealth;
         fuzzyLogic.GetFuzzificationByName("EnemyMana").value = target.CurrentMana;
         fuzzyLogic.GetFuzzificationByName("EnemySpeed").value = target.Speed;

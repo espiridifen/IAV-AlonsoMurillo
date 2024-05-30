@@ -4,6 +4,7 @@ using UnityEngine;
 using FuzzyLogicSystem;
 using System.Linq;
 using UnityEditor.SearchService;
+using System;
 
 public class EnemyBrain : MonoBehaviour
 {
@@ -11,10 +12,10 @@ public class EnemyBrain : MonoBehaviour
     public FuzzyLogic fuzzyLogic { get; private set; } = null;
 
     //Struct para almacenar las acciones y los valores post fuzzi
-    private struct Action
+    private struct Action : IComparable<Action>
     {
-        public string name;
         public float value;
+        public string name;
 
         public Action(string name, float value)
         {
@@ -29,11 +30,16 @@ public class EnemyBrain : MonoBehaviour
         {
             return a.value < b.value;
         }
+
+        public int CompareTo(Action other)
+        {
+            return this < other ? 1 : -1;
+        }
     }
 
     
     //set de acciones para tenerlas ordenadas de mayor a menor, y asi sacar la mas prioritaria
-    HashSet<Action> actions; 
+    SortedSet<Action> actions; 
 
     bool isTurn = false;
     
@@ -44,19 +50,8 @@ public class EnemyBrain : MonoBehaviour
     void Start()
     {
         fuzzyLogic = FuzzyLogic.Deserialize(fuzzyLogicData.bytes, null);
-        actions = new HashSet<Action>();
+        actions = new SortedSet<Action>();
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (isTurn)
-        {
-            
-            
-
-        }
     }
 
     public string CalculateNextAction()
@@ -70,7 +65,7 @@ public class EnemyBrain : MonoBehaviour
     private void SelectTarget()
     {
         //random, se podría extender la lógica difusa para elegir el objetivo, pero el sistema de FuzzyLogic no es muy escalable
-        target = BattleManager.Instance.heroes[Random.Range(0, BattleManager.Instance.heroes.Count)];
+        target = BattleManager.Instance.heroes[UnityEngine.Random.Range(0, BattleManager.Instance.heroes.Count)];
     }
 
     void UpdateValues()
@@ -103,7 +98,9 @@ public class EnemyBrain : MonoBehaviour
             {
                 actions.Add(action);
             }
+            
         }
+        var first = actions.First<Action>();
         //valor a devolver
         //action.First();
             

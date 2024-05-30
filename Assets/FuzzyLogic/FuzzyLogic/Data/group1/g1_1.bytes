@@ -107,7 +107,7 @@
             "_maxValue": 100,
             "_guid": "dab53f6f-3843-48d0-b822-a4c484b4b6e0",
             "_name": "CurrentMana",
-            "_value": 85.69999694824219,
+            "_value": 10.0,
             "trapezoids": [
                 {
                     "_guid": "46345981-279e-4847-a7d7-c4f244c37d39",
@@ -120,8 +120,8 @@
                     "_name": "Out",
                     "_peakPointLeftValue": 0.0,
                     "_footPointLeftValue": 0.0,
-                    "_peakPointRightValue": 1.0,
-                    "_footPointRightValue": 10.0
+                    "_peakPointRightValue": 20.0,
+                    "_footPointRightValue": 30.0
                 },
                 {
                     "_guid": "eecd3229-1ba0-4c0e-a689-7c32825eadf4",
@@ -132,10 +132,10 @@
                         "a": 1.0
                     },
                     "_name": "Low",
-                    "_peakPointLeftValue": 10.0,
-                    "_footPointLeftValue": 1.0,
-                    "_peakPointRightValue": 30.0,
-                    "_footPointRightValue": 40.0
+                    "_peakPointLeftValue": 30.0,
+                    "_footPointLeftValue": 20.0,
+                    "_peakPointRightValue": 40.0,
+                    "_footPointRightValue": 50.0
                 },
                 {
                     "_guid": "3d2d9766-1e18-4533-84c9-7a248bce1492",
@@ -146,8 +146,8 @@
                         "a": 1.0
                     },
                     "_name": "Medium",
-                    "_peakPointLeftValue": 40.0,
-                    "_footPointLeftValue": 30.0,
+                    "_peakPointLeftValue": 50.0,
+                    "_footPointLeftValue": 40.0,
                     "_peakPointRightValue": 70.0,
                     "_footPointRightValue": 80.0
                 },

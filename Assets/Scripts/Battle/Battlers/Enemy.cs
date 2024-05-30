@@ -46,8 +46,10 @@ public class Enemy : Battler
     protected override void StartTurn()
     {
         OnStartTurn?.Invoke(this);
-        SelectAction();
-        
+        if (currentHealth > 0)
+        {
+            SelectAction();
+        }else StartCoroutine(DelayEndTurn(1));
     }
 
    protected virtual void SelectAction()

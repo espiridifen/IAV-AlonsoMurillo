@@ -146,6 +146,7 @@ public class BattleUIHandler : MonoBehaviour
             _actionMenu.SetActive(true);
             _isInSubMenu = false;
         }
+
     }
 
     //Display a menu showing available usable items in the party's inventory.
@@ -277,6 +278,10 @@ public class BattleUIHandler : MonoBehaviour
     public void ToggleActionMenu(bool value)
     {
         var currentHero = BattleManager.Instance.GetCurrentHero();
+        if (currentHero == null)
+        {
+            return;
+        }
         Vector3 menuPosition = currentHero.transform.position + new Vector3(-currentHero.MoveDistance,0,0) + (Vector3)_actionMenuOffset;
         _actionMenu.transform.position = _camera.WorldToScreenPoint(menuPosition);
         _actionMenu.gameObject.SetActive(value);

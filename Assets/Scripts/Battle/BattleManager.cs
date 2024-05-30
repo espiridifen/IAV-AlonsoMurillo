@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BattleManager : MonoBehaviour
 {
@@ -27,7 +28,7 @@ public class BattleManager : MonoBehaviour
     private void Awake()
     {
         //Singleton
-        if(Instance == null)
+        if (Instance == null)
         {
             Instance = this;
         }
@@ -46,12 +47,12 @@ public class BattleManager : MonoBehaviour
     //Initialize listeners for events from heroes and enemies that are deployed at start.
     private void Initialize()
     {
-        foreach(Hero hero in heroes)
+        foreach (Hero hero in heroes)
         {
             hero.OnStartTurn += StartTurn;
             hero.OnEndTurn += EndTurn;
         }
-        foreach(Enemy enemy in enemies)
+        foreach (Enemy enemy in enemies)
         {
             enemy.OnStartTurn += StartTurn;
             enemy.OnEndTurn += EndTurn;
@@ -98,7 +99,7 @@ public class BattleManager : MonoBehaviour
 
     private void StartTurn(Enemy enemy)
     {
-         _isActiveTurn = true;
+        _isActiveTurn = true;
         OnActiveTurnChanged.Invoke(_isActiveTurn);
     }
 
@@ -115,5 +116,48 @@ public class BattleManager : MonoBehaviour
     {
         yield return new WaitForSeconds(seconds);
         OnActiveTurnChanged.Invoke(_isActiveTurn);
+    }
+
+    private void Update()
+    {
+        bool areEnemiesDead = true;
+        foreach (var enemy in enemies)
+        {
+            if (enemy.CurrentHealth > 0)
+            {
+                areEnemiesDead = false;
+                break;
+            }
+        }
+        if (areEnemiesDead)
+        {
+            Debug.Log("You win!");
+            _isFightActive = false;
+            Invoke(nameof(LoadMainMenu), 2f);
+
+            //se cambia de escena tras X segundos
+        }
+
+        bool areHeroesDead = true;
+        foreach (var hero in heroes)
+        {
+            if (hero.CurrentHealth > 0)
+            {
+                areHeroesDead = false;
+                break;
+            }
+        }
+        if (areHeroesDead)
+        {
+            Debug.Log("You lose!");
+            _isFightActive = false;
+            Invoke(nameof(LoadMainMenu), 2f);
+            //se cambia de escena tras X segundos
+        }
+    }
+
+    void LoadMainMenu()
+    {
+        SceneManager.LoadScene("MenuScene");
     }
 }

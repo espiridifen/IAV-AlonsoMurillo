@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using FuzzyLogicSystem;
 using System.Linq;
-using UnityEditor.SearchService;
 using System;
 
 public class EnemyBrain : MonoBehaviour

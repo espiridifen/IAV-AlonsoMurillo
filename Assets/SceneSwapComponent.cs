@@ -9,4 +9,12 @@ public class SceneSwapComponent : MonoBehaviour
     {
         SceneManager.LoadScene("BattleScene");
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
 }

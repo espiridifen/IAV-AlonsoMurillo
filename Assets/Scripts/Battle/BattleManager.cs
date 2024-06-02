@@ -154,6 +154,11 @@ public class BattleManager : MonoBehaviour
             Invoke(nameof(LoadMainMenu), 2f);
             //se cambia de escena tras X segundos
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            LoadMainMenu();
+        }
     }
 
     void LoadMainMenu()

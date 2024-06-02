@@ -117,6 +117,8 @@ function selectAction(Enemy enemy)
 
 Plan de pruebas para comprobar si un jugador nota la diferencia entre los distintos comportamientos de las IAs.
 
+[Enlace al vídeo](https://www.youtube.com/watch?v=E-d9ewQuVac)
+
 ### Jugador contra IA
       -Se hara una partida en el que un jugador combatira contra una IA.
       -Se pondra al jugador contra IAs de distintos comportamientos.
